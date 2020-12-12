@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "Pocket",
+	"version": "1.0",
+
+	"description": "An extension to store my links in the cloud",
+
+	"icons": {
+		"48": "anchor.svg"
+	},
+	"browser_action": {
+		"default_icon": "anchor.svg",
+		"default_popup": "popup.html"
+	},
+	"permissions": ["tabs"],
+	"content_scripts": [
+		{
+			"matches": ["*://*.mozilla.org/*"],
+			"js": ["script.js"]
+		}
+	]
+}
