@@ -58,7 +58,7 @@ export default ({ pages }) => {
 }
 
 export let getStaticProps = async () => {
-    let data = await fetch("https://db.neelr.dev/api/df56b597c2d219efc92084bac536315a")
+    let data = await fetch(`https://db.neelr.dev/api/${process.env.TOKEN}`)
     let { pages } = await data.json()
     return {
         props: {
