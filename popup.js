@@ -1,4 +1,4 @@
-
+let token = ""
 let reload = async () => {
     document.getElementById(`yee`).innerHTML = (await browser.tabs.query({ currentWindow: true, active: true }))[0].url
     document.getElementById(`pages`).innerHTML = ``
